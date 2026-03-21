@@ -1,6 +1,4 @@
 # Makayla-Jarvey-Fitness
-
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -492,7 +490,7 @@ footer {
     <div class="hero-left">
       <p class="eyebrow">NASM Certified Personal Trainer</p>
       <h1 class="hero-name">Makayla<br><em>Jarvey</em></h1>
-      <p class="hero-tagline">Helping busy moms move, lift, and feel strong — on their schedule, in their space.</p>
+      <p class="hero-tagline">Helping busy moms move, lift, and feel strong & empowered on their schedule, in their space.</p>
       <a href="mailto:Makaylajarvey@u.boisestate.edu" class="hero-cta">Work with me</a>
     </div>
     <div class="hero-right">
