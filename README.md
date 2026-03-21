@@ -1,5 +1,5 @@
 # Makayla-Jarvey-Fitness
-<!DOCTYPE html>
+
 
 <html lang="en">
 <head>
