@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -40,7 +41,7 @@ body {
 }
 
 .hero-left {
-  background-color: var(--dark);
+  background-color: #1e1a16 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +57,7 @@ body {
   top: 0;
   bottom: 0;
   width: 80px;
-  background: var(--dark);
+  background-color: #1e1a16;
   clip-path: polygon(0 0, 0% 100%, 100% 50%);
   z-index: 2;
 }
@@ -117,52 +118,37 @@ body {
 .hero-cta:hover { background: var(--terra-light); }
 
 .hero-right {
-  background: var(--sand);
+  background: #2a2420;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   position: relative;
   overflow: hidden;
 }
 
-.hero-graphic {
+.hero-photo {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center top;
   position: absolute;
   inset: 0;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.5s;
 }
 
-.initials-ring {
+.hero-photo-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  inset: 0;
+  background: linear-gradient(to right, rgba(30,26,22,0.3) 0%, transparent 40%),
+              linear-gradient(to top, rgba(30,26,22,0.5) 0%, transparent 50%);
+  z-index: 1;
 }
-
-.initials {
-  font-family: 'Playfair Display', serif;
-  font-size: 140px;
-  font-weight: 700;
-  color: rgba(194, 113, 79, 0.15);
-  line-height: 1;
-  letter-spacing: -4px;
-  user-select: none;
-}
-
-.circle-deco {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(194,113,79,0.3);
-}
-.circle-deco.c1 { width: 340px; height: 340px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
-.circle-deco.c2 { width: 260px; height: 260px; top: 50%; left: 50%; transform: translate(-50%,-50%); border-style: dashed; }
-.circle-deco.c3 { width: 460px; height: 460px; top: 50%; left: 50%; transform: translate(-50%,-50%); opacity: 0.4; }
 
 .badge {
   position: absolute;
-  bottom: 60px;
-  right: 60px;
+  bottom: 40px;
+  right: 40px;
   background: var(--terracotta);
   color: #fff;
   width: 110px;
@@ -174,6 +160,7 @@ body {
   justify-content: center;
   text-align: center;
   line-height: 1.2;
+  z-index: 2;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 1s;
 }
@@ -251,12 +238,10 @@ body {
   margin-top: 6px;
 }
 
-.about-image-side {
-  position: relative;
-}
+.about-image-side { position: relative; }
 
 .cert-card {
-  background: var(--dark);
+  background: #1e1a16 !important;
   color: var(--cream);
   padding: 48px 44px;
   position: relative;
@@ -335,11 +320,7 @@ body {
 
 .card:hover { background: var(--sand); }
 
-.card-icon {
-  font-size: 36px;
-  margin-bottom: 24px;
-  display: block;
-}
+.card-icon { font-size: 36px; margin-bottom: 24px; display: block; }
 
 .card-title {
   font-family: 'Playfair Display', serif;
@@ -348,11 +329,7 @@ body {
   color: var(--dark);
 }
 
-.card-desc {
-  font-size: 14px;
-  line-height: 1.75;
-  color: var(--mid);
-}
+.card-desc { font-size: 14px; line-height: 1.75; color: var(--mid); }
 
 .card-num {
   position: absolute;
@@ -368,7 +345,7 @@ body {
 
 /* ── CONTACT ── */
 .contact {
-  background: var(--dark);
+  background: #1e1a16 !important;
   padding: 100px 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -386,17 +363,9 @@ body {
 
 .contact-title em { font-style: italic; color: var(--terra-light); }
 
-.contact-sub {
-  font-size: 15px;
-  color: #a89880;
-  line-height: 1.75;
-}
+.contact-sub { font-size: 15px; color: #a89880; line-height: 1.75; }
 
-.contact-items {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+.contact-items { display: flex; flex-direction: column; gap: 20px; }
 
 .contact-item {
   display: flex;
@@ -434,10 +403,7 @@ body {
   margin-bottom: 4px;
 }
 
-.contact-item-val {
-  font-size: 14px;
-  color: #d0c4b4;
-}
+.contact-item-val { font-size: 14px; color: #d0c4b4; }
 
 /* ── FOOTER ── */
 footer {
@@ -454,10 +420,7 @@ footer {
   color: var(--cream);
 }
 
-.footer-copy {
-  font-size: 12px;
-  color: #6b5e50;
-}
+.footer-copy { font-size: 12px; color: #6b5e50; }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
@@ -465,12 +428,17 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 60px 32px; }
   .hero-left::after { display: none; }
-  .hero-right { min-height: 300px; }
+  .hero-right { min-height: 420px; }
   .about { grid-template-columns: 1fr; padding: 64px 32px; gap: 48px; }
   .specialties { padding: 64px 32px; }
   .cards { grid-template-columns: 1fr; }
@@ -490,16 +458,12 @@ footer {
     <div class="hero-left">
       <p class="eyebrow">NASM Certified Personal Trainer</p>
       <h1 class="hero-name">Makayla<br><em>Jarvey</em></h1>
-      <p class="hero-tagline">Helping busy moms move, lift, and feel strong & empowered on their schedule, in their space.</p>
+      <p class="hero-tagline">Helping busy moms move, lift, and feel strong — on their schedule, in their space.</p>
       <a href="mailto:Makaylajarvey@u.boisestate.edu" class="hero-cta">Work with me</a>
     </div>
     <div class="hero-right">
-      <div class="circle-deco c3"></div>
-      <div class="circle-deco c1"></div>
-      <div class="circle-deco c2"></div>
-      <div class="initials-ring">
-        <div class="initials">MJ</div>
-      </div>
+      <img src="photo.jpg" alt="Makayla Jarvey - Personal Trainer" class="hero-photo" />
+      <div class="hero-photo-overlay"></div>
       <div class="badge">
         <span class="badge-num">3</span>
         <span class="badge-label">Years Training</span>
