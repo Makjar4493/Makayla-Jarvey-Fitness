@@ -196,23 +196,66 @@
     .card-title { font-family: 'Antic Didone', serif; font-size: 22px; margin-bottom: 14px; color: #2c2420; }
     .card-desc { font-family: 'Cantarell', sans-serif; font-size: 14px; line-height: 1.75; color: #6b5b52; }
     .card-num { position: absolute; top: 24px; right: 28px; font-family: 'Antic Didone', serif; font-size: 56px; color: rgba(232,164,164,0.15); line-height: 1; user-select: none; }
+
+    /* CLIENT SUCCESS SECTION */
+    .results {
+      background: #2c2420;
+      padding: 100px 60px;
+      text-align: center;
+    }
+    .results .section-label { color: #e8a4a4; margin-bottom: 20px; }
+    .results .section-title { color: #fdf6f0; margin-bottom: 16px; }
+    .results .section-title em { color: #f0bfbf; }
+    .results-subtitle {
+      font-family: 'Cantarell', sans-serif;
+      font-size: 15px;
+      color: #c4a898;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .results-image-wrap {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .results-image {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+    .results-caption {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 28px;
+      background: #e8a4a4;
+      color: #fff;
+      padding: 14px 32px;
+      font-family: 'Cantarell', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .results-caption span { font-family: 'Antic Didone', serif; font-size: 22px; font-weight: 400; }
+
     .contact {
-      background: #2c2420 !important;
+      background: #fdf6f0 !important;
       padding: 100px 60px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
     }
-    .contact-title { font-family: 'Antic Didone', serif; font-size: clamp(36px, 4vw, 56px); color: #fdf6f0; line-height: 1.15; margin-bottom: 20px; }
-    .contact-title em { font-style: italic; color: #f0bfbf; }
-    .contact-sub { font-family: 'Cantarell', sans-serif; font-size: 15px; color: #c4a898; line-height: 1.75; }
+    .contact-title { font-family: 'Antic Didone', serif; font-size: clamp(36px, 4vw, 56px); color: #2c2420; line-height: 1.15; margin-bottom: 20px; }
+    .contact-title em { font-style: italic; color: #d4807f; }
+    .contact-sub { font-family: 'Cantarell', sans-serif; font-size: 15px; color: #6b5b52; line-height: 1.75; }
     .contact-items { display: flex; flex-direction: column; gap: 20px; }
-    .contact-item { display: flex; align-items: center; gap: 20px; padding: 24px 28px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: #fdf6f0; transition: border-color 0.25s, background 0.25s; }
+    .contact-item { display: flex; align-items: center; gap: 20px; padding: 24px 28px; border: 1px solid rgba(44,36,32,0.12); text-decoration: none; color: #2c2420; transition: border-color 0.25s, background 0.25s; }
     .contact-item:hover { border-color: #e8a4a4; background: rgba(232,164,164,0.06); }
     .contact-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(232,164,164,0.15); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
     .contact-item-label { font-family: 'Cantarell', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #e8a4a4; margin-bottom: 4px; }
-    .contact-item-val { font-family: 'Cantarell', sans-serif; font-size: 14px; color: #d4c0b8; }
+    .contact-item-val { font-family: 'Cantarell', sans-serif; font-size: 14px; color: #6b5b52; }
     footer { background: #1a1210; padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; }
     .footer-name { font-family: 'Antic Didone', serif; font-size: 18px; color: #fdf6f0; }
     .footer-copy { font-family: 'Cantarell', sans-serif; font-size: 12px; color: #7a6058; }
@@ -226,6 +269,7 @@
       .about { grid-template-columns: 1fr; padding: 64px 32px; gap: 48px; }
       .specialties { padding: 64px 32px; }
       .cards { grid-template-columns: 1fr; }
+      .results { padding: 64px 32px; }
       .contact { grid-template-columns: 1fr; padding: 64px 32px; gap: 48px; }
       footer { flex-direction: column; gap: 8px; padding: 24px 32px; text-align: center; }
       .about-stats { gap: 24px; }
@@ -237,11 +281,11 @@
     <div class="hero-left">
       <p class="hero-name-small">Makayla Young</p>
       <h1 class="hero-name">Personal Trainer<br>for <em>Busy Moms</em></h1>
-      <p class="hero-tagline">Helping busy moms move, lift, and feel strong — on their schedule, in their space.</p>
+      <p class="hero-tagline">Helping busy moms move, lift, and feel strong on their schedule, in their space.</p>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIrC6Tro-Fvn4gnFnEkBflJkJNEUpWxg_f5xTEb3e_uLWaNw/viewform" target="_blank" class="hero-cta">Work with me</a>
     </div>
     <div class="hero-right">
-      <img src="photo.jpg" alt="Makayla Young - Personal Trainer for Busy Moms in Boise Idaho" class="hero-photo" />
+      <img src="photo.jpg" alt="Makayla Young Personal Trainer for Busy Moms in Boise Idaho" class="hero-photo" />
       <div class="hero-photo-overlay"></div>
       <div class="badge">
         <span class="badge-num">3</span>
@@ -249,15 +293,16 @@
       </div>
     </div>
   </section>
+
   <section class="about">
     <div>
       <p class="section-label">About Me</p>
       <h2 class="section-title">Fitness that fits <em>your life</em></h2>
-      <p class="about-text">I'm Makayla Young, a NASM-certified personal trainer based in Meridian, Idaho, specializing in online and home-based coaching. My clients are busy moms who want real results without having to rearrange their whole day around a gym.</p>
+      <p class="about-text">I'm Makayla Young, a NASM certified personal trainer based in Meridian, Idaho, specializing in online and home based coaching. My clients are busy moms who want real results without having to rearrange their whole day around a gym.</p>
       <p class="about-text">Whether you're brand new to lifting or want to kick your cardio up a notch, I build programs around what actually works for your body and your schedule.</p>
       <div class="about-stats">
         <div><div class="stat-num">3+</div><div class="stat-label">Years Experience</div></div>
-        <div><div class="stat-num">100%</div><div class="stat-label">Online & Home-Based</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">Online and Home Based</div></div>
         <div><div class="stat-num">1:1</div><div class="stat-label">Personalized Coaching</div></div>
       </div>
     </div>
@@ -265,26 +310,40 @@
       <div class="cert-card">
         <p class="cert-card-label">Certification</p>
         <p class="cert-name">NASM Certified<br>Personal Trainer</p>
-        <p class="cert-sub">National Academy of Sports Medicine<br>Active & Practicing — Online + Home Gym</p>
+        <p class="cert-sub">National Academy of Sports Medicine<br>Active and Practicing — Online and Home Gym</p>
         <div class="location-tag"><span class="dot"></span>Meridian, Idaho · Available Nationwide Online</div>
       </div>
     </div>
   </section>
+
   <section class="specialties">
     <div class="specialties-header">
       <p class="section-label">What I Offer</p>
       <h2 class="section-title">Training built <em>for you</em></h2>
     </div>
     <div class="cards">
-      <div class="card"><span class="card-num">01</span><span class="card-icon">🏋️‍♀️</span><h3 class="card-title">Strength & Lifting</h3><p class="card-desc">Progressive strength programs designed to build confidence and capability — no barbell experience required. We start where you are.</p></div>
-      <div class="card"><span class="card-num">02</span><span class="card-icon">🔥</span><h3 class="card-title">HIIT & Cardio</h3><p class="card-desc">High-energy cardio sessions that get results in less time. Perfect for moms who need maximum impact in a short window.</p></div>
-      <div class="card"><span class="card-num">03</span><span class="card-icon">📱</span><h3 class="card-title">Online Coaching</h3><p class="card-desc">Fully remote, fully personalized. Train at home, at the park, wherever life takes you — I'll be with you every step of the way.</p></div>
+      <div class="card"><span class="card-num">01</span><span class="card-icon">🏋️‍♀️</span><h3 class="card-title">Strength and Lifting</h3><p class="card-desc">Progressive strength programs designed to build confidence and capability. No barbell experience required. We start where you are.</p></div>
+      <div class="card"><span class="card-num">02</span><span class="card-icon">🔥</span><h3 class="card-title">HIIT and Cardio</h3><p class="card-desc">High energy cardio sessions that get results in less time. Perfect for moms who need maximum impact in a short window.</p></div>
+      <div class="card"><span class="card-num">03</span><span class="card-icon">📱</span><h3 class="card-title">Online Coaching</h3><p class="card-desc">Fully remote, fully personalized. Train at home, at the park, wherever life takes you. I will be with you every step of the way.</p></div>
     </div>
   </section>
+
+  <section class="results">
+    <p class="section-label">Client Success</p>
+    <h2 class="section-title">Real results from <em>real moms</em></h2>
+    <p class="results-subtitle">This is what happens when a busy mom decides to show up for herself consistently.<br>No crash diets. No hours at the gym. Just smart training that fits into real life.</p>
+    <div class="results-image-wrap">
+      <img src="SCRL_0003.jpeg" alt="Client before and after transformation" class="results-image" />
+      <div class="results-caption">
+        <span>5¾"</span> lost in 3 Months of Online Coaching
+      </div>
+    </div>
+  </section>
+
   <section class="contact">
     <div>
       <h2 class="contact-title">Ready to get <em>started?</em></h2>
-      <p class="contact-sub">Sessions are booked directly through me — no third-party apps. Just reach out and we'll find a time that works for your life.</p>
+      <p class="contact-sub">Sessions are booked directly through me. No third party apps. Just reach out and we will find a time that works for your life.</p>
     </div>
     <div class="contact-items">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIrC6Tro-Fvn4gnFnEkBflJkJNEUpWxg_f5xTEb3e_uLWaNw/viewform" target="_blank" class="contact-item">
@@ -301,9 +360,10 @@
       </div>
     </div>
   </section>
+
   <footer>
     <span class="footer-name">Makayla Young</span>
-    <span class="footer-copy">Personal Trainer for Busy Moms · Boise & Meridian, Idaho</span>
+    <span class="footer-copy">Personal Trainer for Busy Moms · Boise and Meridian, Idaho</span>
   </footer>
 </body>
 </html>
